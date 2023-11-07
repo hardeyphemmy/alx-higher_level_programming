@@ -8,8 +8,4 @@ def uppercase(str):
         if num >= 97 and num <= 122:
             num = num - 32
         print("{:c}".format(num), end="")
-    print()
-
-
-if __name__ == "__main__":
-    uppercase("Best# School 98 Battery street")
+    print("")
