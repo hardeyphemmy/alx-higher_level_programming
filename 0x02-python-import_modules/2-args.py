@@ -11,15 +11,3 @@ else:
 
 for i in range(1, length):
     print("{}: {}".format(i, sys.argv[i]))
-
-
-
-
-
-
-
-
-
-
-
-
