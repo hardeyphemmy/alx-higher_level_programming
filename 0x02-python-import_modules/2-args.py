@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-
+if __name__ == "__main__":
 length = len(sys.argv)
 if (length == 2):
     print("1 argument:")
