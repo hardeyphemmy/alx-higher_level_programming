@@ -2,9 +2,9 @@
 import sys
 
 length = len(sys.argv)
-if (length == 1):
+if (length == 2):
     print("1 argument:")
-elif (length > 1):
+elif (length > 2):
     print("{} arguments:".format(length - 1))
 else:
     print("0 arguments.")
