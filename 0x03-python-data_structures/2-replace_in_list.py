@@ -5,7 +5,7 @@ def replace_in_list(my_list, idx, element):
     Args:
     my_list: The list from from the element.
     idx: index from the element to replace
-    element: The number to replace
+    new_element: The number to replace
     Returns:
     The original list
     """
@@ -20,10 +20,10 @@ def replace_in_list(my_list, idx, element):
 
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5]
-    idx = 2
-    new_element = 9
+    idx = 3
+    new_element = 8
 
     new_list = replace_in_list(my_list, idx, new_element)
-    my_list[2] = new_element
+    new_list[3] = 8
     print(new_list)
     print(my_list)
