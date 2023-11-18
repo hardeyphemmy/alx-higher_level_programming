@@ -2,7 +2,7 @@
 def print_list_integer(my_list=[]):
     for number in my_list:
         if isinstance(number, int):
-            print(["{:d}"].format(number) end=', ')
+            print(["{:d}"].format(number), end=', ')
     print()
 
 
