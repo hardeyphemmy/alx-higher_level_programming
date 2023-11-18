@@ -3,7 +3,7 @@ def print_list_integer(my_list=[]):
     for number in my_list:
         if isinstance(number, int):
             print(f"{}".format(number) end=', ')
-            print()
+    print()
 
 
 if __name__ == "__main__":
