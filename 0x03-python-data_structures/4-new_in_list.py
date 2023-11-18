@@ -1,29 +1,28 @@
- 1 #!/usr/bin/python3
-  2 def replace_in_list(my_list, idx, element):
-  3     """
-  4     Replace an elemnt of a list.
-  5     Args:
-  6     my_list: The list from from the element.
-  7     idx: index from the element to replace
-  8     new_element: The number to replace
-  9     Returns:
- 10     The original list
- 11     """
- 12
- 13     if 0 <= idx < len(my_list):
- 14         my_list_copy = my_list.copy()
- 15         my_list_copy[idx] = new_element
- 16         return (my_list_copy)
- 17     else:
- 18         return (my_list)
- 19
- 20
- 21 if __name__ == "__main__":
- 22     my_list = [1, 2, 3, 4, 5]
- 23     idx = 3
- 24     new_element = 8
- 25
- 26     new_list = replace_in_list(my_list, idx, new_element)
- 27     new_list[3] = 8
- 28     print(new_list)
- 29     print(my_list)
+#!/usr/bin/python3
+def new_in_list(my_list, idx, element):
+    """
+    Replace an elemnt of a list.
+    Args:
+    my_list: The list from from the element.
+    idx: index from the element to replace
+    new_element: The number to replace
+    Returns:
+    The original list
+    """
+
+    if 0 <= idx < len(my_list):
+        my_list_copy = my_list.copy()
+        my_list_copy[idx] = new_element
+        return (my_list_copy)
+    else:
+        return (my_list)
+
+
+if __name__ == "__main__":
+    my_list = [1, 2, 3, 4, 5]
+    idx = 3
+    new_element = 8
+    new_list = new_in_list(my_list, idx, new_element)
+    new_list[3] = 8
+    print(new_list)
+    print(my_list)
