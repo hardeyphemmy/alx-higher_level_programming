@@ -22,6 +22,5 @@ if __name__ == "__main__":
     new_element = 8
 
     new_list = replace_in_list(my_list, idx, new_element)
-    new_list[3] = 8
     print(new_list)
     print(my_list)
