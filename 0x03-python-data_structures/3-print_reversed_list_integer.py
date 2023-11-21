@@ -9,4 +9,4 @@ if __name__ == "__main__":
     my_list.reverse()
     print_reversed_list_integer()
     for number in my_list:
-        print("{}".format(number), end='\n')
+        print("{:d}".format(number), end='\n')
