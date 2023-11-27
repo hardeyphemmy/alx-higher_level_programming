@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
     """
-    Replace an elemnt of a list.
+    Replace an element of a list.
     Args:
     my_list: The list from from the element.
     idx: index from the element to replace
