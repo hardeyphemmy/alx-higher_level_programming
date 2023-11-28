@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def no_c(my_string):
+def no_c(my_str):
     """
     Removes all characters 'c' and 'C' from a string.
     Args:
@@ -8,10 +8,10 @@ def no_c(my_string):
     Returns:
     Modified string with 'c' and 'C' removed
     """
-    return ''.join(char for char in my_string if char.lower() not in {'c', 'C'})
+    return ''.join(char for char in my_str if char.lower() not in {'c', 'C'})
 
 
 if __name__ == "__main__":
-    my_string = "Best School"
-    new_string = no_c(my_string)
+    my_str = "Best School"
+    new_string = no_c(my_str)
     print(new_string)
