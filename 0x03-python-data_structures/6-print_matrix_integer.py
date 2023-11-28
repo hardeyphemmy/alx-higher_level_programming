@@ -4,8 +4,8 @@ def print_matrix_integer(matrix=[[]]):
     Function that print matrix of integers
     """
     for row in matrix:
-        row_ele = ''.join("{} ".format(element, end=" ") for element in row)
-        print(row_ele)
+        row_str = ''.join("{:d} ".format(element) for element in row)
+        print(row_str)
 
 
 if __name__ == "__main__":
