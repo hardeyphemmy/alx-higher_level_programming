@@ -8,10 +8,10 @@ def no_c(my_string):
     Returns:
     Modified string with 'c' and 'C' removed
     """
-    return (my_string.replace('c', '').replace('C', ''))
+    return ''.join(char for char in my_string if char.lower() not in{'c', 'C'})
 
 
 if __name__ == "__main__":
-    my_string = "Best school"
+    my_string = "Best School"
     new_string = no_c(my_string)
     print(new_string)
