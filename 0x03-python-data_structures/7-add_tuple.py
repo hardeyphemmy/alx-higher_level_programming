@@ -11,9 +11,9 @@ def add_tuple(tuple_a=(), tuple_b=()):
     add_tuple = tuple(a + b for a, b in zip(tuple_a, tuple_b))
     print(add_tuple)
     if add_tuple[0] > 2:
-        return 0
+        return (0, 0)
     else:
-        return sum(add_tuple)
+        return (add_tuple)
 
 
 if __name__ == "__main__":
