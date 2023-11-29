@@ -10,11 +10,12 @@ def add_tuple(tuple_a=(), tuple_b=()):
     """
     result_tuple = tuple(a + b for a, b in zip(tuple_a, tuple_b))
     print(result_tuple)
-    
-    if result_tuple[0] < 2:
-        return (0, 0)
+
+    # if a tuple is smaller than 2, use the value 0 for each missing integer
+    if any(x < 2 for x in tuple_a or any(x < 2 for x in tuple_b)):
+        return ((0), tuple())
     else:
-        return (result_tuple)
+        return (tuple[:2])  # if tuple is bigger than 2 use first 2 integer
 
 
 if __name__ == "__main__":
