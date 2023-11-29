@@ -8,15 +8,16 @@ def add_tuple(tuple_a=(), tuple_b=()):
     Return:
     Tuple with 2 integers
     """
-    add_tuple = tuple(a + b for a, b in zip(tuple_a, tuple_b))
-    print(add_tuple)
-    if add_tuple[0] > 2:
+    result_tuple = tuple(a + b for a, b in zip(tuple_a, tuple_b))
+    print(result_tuple)
+    if result_tuple[0] < 2:
         return (0, 0)
     else:
-        return (add_tuple)
+        return (result_tuple)
 
 
 if __name__ == "__main__":
     tuple_a = (1, 89)
     tuple_b = (88, 11)
-    add_tuple(tuple_a, tuple_b)
+    result = add_tuple(tuple_a, tuple_b)
+    print(result)
