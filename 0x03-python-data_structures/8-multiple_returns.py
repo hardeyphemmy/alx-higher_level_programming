@@ -17,7 +17,7 @@ def multiple_returns(sentence):
 
 
 if __name__ == "__main__":
-    sentence = "At school, I learnt C!"
+    sentence = "Holberton"
     result = multiple_returns(sentence)
 
     first_char, length_tuple = result
