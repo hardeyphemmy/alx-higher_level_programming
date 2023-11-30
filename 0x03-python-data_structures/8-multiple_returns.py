@@ -10,20 +10,19 @@ def multiple_returns(sentence):
     string_length = len(sentence)
     if len(sentence) > 0:
         first_character = sentence[0]
-        length_tuple = (string_length,)
-        return (first_character, length_tuple)
+        return (first_character, string_length)
     else:
-        return (None)
+        return 0, (None)
 
 
 if __name__ == "__main__":
     sentence = "Holberton"
     result = multiple_returns(sentence)
 
-    first_character, length_tuple = result
+    length, first_character = multiple_returns(sentence)
 
-    if length_tuple[0] is not None:
-        print("Length: {:d} - First character: {:s}".format(
-            length_tuple[0], first_character))
+    if length is not None:
+        print("Length: {} - First character: {}".format(
+            length, first_character))
     else:
         print("Length: None - First character: None")
