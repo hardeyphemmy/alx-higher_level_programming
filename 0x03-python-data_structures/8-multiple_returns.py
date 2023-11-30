@@ -23,7 +23,7 @@ if __name__ == "__main__":
     first_character, length_tuple = result
 
     if length_tuple[0] is not None:
-        print("Length: {} - First character: {:s}".format(
+        print("Length: {:d} - First character: {:s}".format(
             length_tuple[0], first_character))
     else:
         print("Length: None - First character: None")
