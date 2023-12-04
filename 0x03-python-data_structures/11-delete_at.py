@@ -10,15 +10,15 @@ def delete_at(my_list=[], idx=0):
     """
     if 0 <= idx < len(my_list):
         modified_list = (my_list[:idx] + my_list[idx + 1:])
-        return (modified_list, modified_list.copy())
+        return (modified_list.copy(), modified_list.copy())
     else:
-        return (my_list, my_list.copy())
+        return (my_list.copy(), my_list.copy())
 
 
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5]
     idx = 3
-    modified_list, my_list = delete_at(my_list, idx)
+    modified_list, my_new_list = delete_at(my_list, idx)
 
     print(modified_list)
-    print(my_list)
+    print(my_new_list)
