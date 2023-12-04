@@ -11,7 +11,7 @@ def delete_at(my_list=[], idx=0):
     if 0 <= idx < len(my_list):
         my_list_remove = my_list[idx]
         my_list.remove(my_list_remove)
-        return ( my_list.copy())
+        return (my_list.copy())
     else:
         return (my_list)
 
