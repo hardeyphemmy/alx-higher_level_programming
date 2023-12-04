@@ -9,7 +9,7 @@ def delete_at(my_list=[], idx=0):
     Same list
     """
     if 0 <= idx < len(my_list):
-        modified_list = (my_list[:idx])
+        modified_list = (my_list[idx + 1:])
         return (modified_list, modified_list.copy())
     else:
         return (my_list.copy(), my_list.copy())
