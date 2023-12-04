@@ -9,10 +9,11 @@ def delete_at(my_list=[], idx=0):
     Same list
     """
     if 0 <= idx < len(my_list):
-        modified_list = (my_list[:idx] + my_list[idx + 1:])
-        return (modified_list.copy())
+        my_list_remove = my_list[idx]
+        my_list.remove(my_list_remove)
+        return ( my_list.copy())
     else:
-        return (modified_list)
+        return (my_list)
 
 
 if __name__ == "__main__":
