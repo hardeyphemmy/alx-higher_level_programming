@@ -18,7 +18,7 @@ def delete_at(my_list=[], idx=0):
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5]
     idx = 3
-    modified_list, my_new_list = delete_at(my_list, idx)
+    my_new_list, modified_list = delete_at(my_list, idx)
 
     print(modified_list)
     print(my_new_list)
