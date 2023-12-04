@@ -1,23 +1,24 @@
 #!/usr/bin/python3
 def delete_at(my_list=[], idx=0):
     """
-    Fuction that deletes item from the list
+    Fuction that deletes item from the list and modify the original list
     Args:
     my_list: list of element
     idx: elemnt to be delected
     Return:
-    New list
+    Same list
     """
     if 0 <= idx < len(my_list):
-        return (my_list[:idx] + my_list[idx + 1:])
+        modified_list = (my_list[:idx] + my_list[idx + 1:])
+        return (modified_list, modified_list.copy())
     else:
-        return (my_list)
+        return (my_list, my_list.copy())
 
 
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5]
     idx = 3
-    new_result = delete_at(my_list, idx)
+    modified_list, my_list = delete_at(my_list, idx)
 
-    print(new_result)
+    print(modified_list)
     print(my_list)
