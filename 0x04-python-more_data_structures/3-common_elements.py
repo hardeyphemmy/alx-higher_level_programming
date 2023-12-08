@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-def uniq_add(my_list=[]):
+def common_elements(set_1, set_2):
     """
-    Function that adds all unique integers in a list
+    Function that returns a set of common elements in two sets
     Args:
-    add - addition of integer in a list
-    Returns:
-    Sum of the unique integer
+    set_1 - elements in first set
+    set_2 -  element in the second set
+    Return:
+    common element in the set
     """
-    unique_elements = []
-    for num in my_list:
-        if num not in unique_elements:
-            unique_elements.append(num)
+    common_set = set_1.intersection(set_2)
+    return (common_set)
 
-    return sum(unique_elements)
 
 
 if __name__ == "__main__":
-    my_list = [1, 2, 3, 1, 4, 2, 5]
+    set_1 = {"Python", "C", "Javascript"}
+    set_2 = {"Bash", "C", "Ruby", "Perl"}
+    c_set = common_elements(set_1, set_2)
 
-    result = uniq_add(my_list)
-
-    print("Result: {}".format(result))
+    print(c_set)
