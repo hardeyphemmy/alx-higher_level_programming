@@ -12,7 +12,7 @@ def square_matrix_simple(matrix=[]):
         square_row = [num ** 2 for num in row]
         squared_matrix.append(square_row)
 
-        return squared_matrix
+    return squared_matrix
 
 
 if __name__ == "__main__":
