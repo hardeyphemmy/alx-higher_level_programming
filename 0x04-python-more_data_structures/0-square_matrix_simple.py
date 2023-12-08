@@ -7,7 +7,7 @@ def square_matrix_simple(matrix=[]):
     REturns:
     List of lists: the mayrix with square value
     """
-    squared_matrix  = []
+    squared_matrix = []
     for row in matrix:
         square_row = [num ** 2 for num in row]
         squared_matrix.append(square_row)
