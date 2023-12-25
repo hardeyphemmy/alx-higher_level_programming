@@ -7,7 +7,6 @@ def safe_print_integer(value):
     except (ValueError, IndexError):
         print("Error: ValueError or IndexError occurred")
         return False
-    return value
 
 
 if __name__ == "__main__":
