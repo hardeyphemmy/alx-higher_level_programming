@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def safe_print_integer(value):
     try:
-        print("{:d}".format(int(value)))
+        arg = int(value)
+        print("{:d}".format(arg))
         return True
     except (ValueError, IndexError):
         print("Error: ValueError or IndexError occurred")
