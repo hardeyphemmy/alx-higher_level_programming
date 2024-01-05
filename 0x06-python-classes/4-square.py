@@ -3,9 +3,10 @@
 
 
 class Square:
-    """"This is a squared class."""
+    """This is a squared class."""
+
     def __init__(self, size=0):
-        """"The constructor of the class."""
+        """The constructor of the class."""
         self.__size = size
 
     @property
@@ -15,18 +16,18 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Protery setter to set size with validation."""
+        """Property setter to set size with validation."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
 
         if value < 0:
             raise ValueError("size must be >= 0")
 
-            self.__size = value
+        self.__size = value
 
     def area(self):
         """This method returns the square of an area."""
-        return self.__size ** 2
+        return self.size ** 2
 
 
 if __name__ == "__main__":
