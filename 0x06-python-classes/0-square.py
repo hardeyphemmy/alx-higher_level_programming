@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Here is a sample My first square."""
+
+
 class Square:
     """This is a square class."""
     pass
