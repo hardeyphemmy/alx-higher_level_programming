@@ -1,4 +1,9 @@
 -- list all the comedy shows in the database
+-- create database
+CREATE DATABASE tv_shows;
+-- switch database
+USE tv_shows;
+-- list comedy in the database
 SELECT title
 FROM tv_shows
 LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.shows_id
