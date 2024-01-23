@@ -1,6 +1,6 @@
 -- list all shows in hbtn_0d_tvshows that have atleast one genre linked
 -- create databasedd 
-CREATE DATABASE IF NOT EXISTS hbtn_0d_tv_shows.tv_shows;
+CREATE DATABASE IF NOT EXISTS hbtn_0d_tv_shows;
 -- use hbtn_0d_tvshows
 USE hbtn_0d_tv_shows.tv_shows;
 -- list all rows in a column
