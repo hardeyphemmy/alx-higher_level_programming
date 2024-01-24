@@ -1,6 +1,4 @@
 -- Create a table called 'first_table' in the current database
-
-SHOW DATABASES;
 -- switch database
 USE hbtn_test_db_4;
 -- create table
