@@ -2,16 +2,18 @@
 def add_integer(a, b=98):
     """The methods that add two numbers.
 
-    a and b must be integers or floats, a and b must be first 
+    a and b must be integers or floats, a and b must be first
     casted to integers if they are float.
 
     Returns
     an integer: the addition of a and b."""
-    
-    if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
-        raise TypeError("Both 'a' and 'b' must be either integer or a float")
-    a = int(a) if isinstance(a, float, int) else a
-    b = int(b) if isinstance(b, float, int) else b
+
+    if not (isinstance(a, (int, float))):
+        raise TypeError("'a' must be either integer or a float")
+    if not (isinstance(b, (int, float))):
+        raise TypeError("'b' must be either integer or a float")
+    a = int(a) if isinstance(a, float) else a
+    b = int(b) if isinstance(b, float) else b
     return (a + b)
 
 
