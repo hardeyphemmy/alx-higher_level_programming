@@ -1,0 +1,28 @@
+import unittest
+from 0-add_integer import add_integer
+
+class TestAddInteger(unittest.TestCase):
+"""Testing the function."""
+   def test_add_integer(self):
+	
+	# Testcase1:testing with integers
+	self.assertEqual(add_integer((1, 2), 3)
+
+	# Testcase2:testing with negative integer
+	self.assertEqual(add_integer(100, -2), 98)
+
+	# Testcase3:testing with integer
+	self.assertEqual(add_integer(2), 100)
+
+	# Testcase:testing with float
+	self.assert.Equal(add_integer(100.3, -2), 98)
+
+	# Testcase:testing with non numbers
+	self.assertEqual(add_integer(4, 'school'), "Both 'a' and 'b' must be an integer or a float")
+
+	# Testcase:testing with string
+	self.assert.Equal(add_integer('none'), "Both 'a' and 'b' must be an integer or a float")
+
+
+if __name__ == "__main__":
+    unittest.main()
