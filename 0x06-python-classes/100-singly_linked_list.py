@@ -57,14 +57,6 @@ class Node:
         self.__next_node = value
 
 
-class Node:
-    """Node class for singly linked list."""
-
-    def __init__(self, data=None, next_node=None):
-        self.data = data
-        self.next_node = next_node
-
-
 class SinglyLinkedList:
     """The class of singly linked list."""
 
@@ -108,7 +100,7 @@ class SinglyLinkedList:
         while current_node is not None:
             print(current_node.data, end=" -> ")
             current_node = current_node.next_node
-        print("Node")
+        print("None")
 
 
 if __name__ == "__main__":
