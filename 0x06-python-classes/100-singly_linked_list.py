@@ -58,7 +58,19 @@ class Node:
 
 
 class SinglyLinkedList:
-    """The class of singly linked list."""
+    """The class of singly linked list.
+
+    Attribute:
+        is_empty: Check if linked likst is empty
+        append: Add new nodes to the end of the linked list
+        sorted: Arrange position in ascending order in a linked list
+        display: Display element of the linked list.
+
+    Args:
+        data: Integer in a list
+        value: Element in the node
+
+    """
 
     def __init__(self):
         """Initializes an empty singly linked list."""
