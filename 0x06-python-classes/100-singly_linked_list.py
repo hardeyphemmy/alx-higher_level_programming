@@ -1,10 +1,30 @@
 #!/usr/bin/python3
+"""This is a singly linked list module."""
+
 
 class Node:
-    """This class defines the nodes."""
+    """This class defines the nodes.
+
+    The node takes in two Attributes
+
+    Atrributes:
+    data: Data to set in a linked list
+    next_node: linked node in a singly linked list
+
+    Methods:
+    Data: property to retrieve the data
+    next_node: property to retrieve the next_node
+    """
 
     def __init__(self, data=None, next_node=None):
-        """This is a constructor method"""
+        """This is a constructor method
+
+        It initializes the class with data and next_node attributes
+
+        Args:
+            Value: Must be an integer
+            Nodes: must not be empty
+        """
         self.__data = None
         self.data = data
         self.__next_node = None
@@ -20,7 +40,7 @@ class Node:
         """Property to set the data"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
-        return self.__data = value
+        self.__data = value
 
     @property
     def next_node(self):
@@ -32,7 +52,7 @@ class Node:
         """Property to set the next_node."""
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
-        return self.__next_node = value
+        self.__next_node = value
 
 
 class Node:
@@ -74,8 +94,8 @@ class SinglyLinkedList:
             self._head = new_node
         else:
             current_node = self._head
-            while (current_node.next_node is not None) and
-            (current_node.next_node < value):
+            while (current_node.next_node is not None) and \
+                    (current_node.next_node < value):
                 current_node = current_node.next_node
             new_node.next_node = current_node.next_node
             current_node.next_node = new_node
