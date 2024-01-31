@@ -14,8 +14,7 @@ class Rectangle:
     value: The integer assigned
     """
     def __init__(self, width=0, height=0):
-        self.__width = 0
-        self.width = width
+        self.__width = width
         self.__height = height
 
     @property
