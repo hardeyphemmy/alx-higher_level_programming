@@ -50,9 +50,9 @@ if __name__ == "__main__":
     try:
         my_rectangle1 = Rectangle(2, -3)
     except Exception as e:
-        print("[{}] {}".format(e.__class__.name__, e))
+        print("[{}] {}".format(e.__class__.__name__, e))
 
     try:
         my_rectangle2 = Rectangle(2, "3")
     except Exception as e:
-        print("[{}] {}".format(e.__class__.name__, e))
+        print("[{}] {}".format(e.__class__.__name__, e))
