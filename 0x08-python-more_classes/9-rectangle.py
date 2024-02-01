@@ -104,3 +104,10 @@ class Rectangle:
     def square(cls, size=0):
         """Return a new Rectangle instance with width == height == size."""
         return cls(size, size)
+
+    try:
+        mysquare = Rectangle.square(-2)
+        print("{} / {}".format(mysquare.width, mysquare.height))
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
