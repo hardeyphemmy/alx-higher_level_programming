@@ -25,7 +25,7 @@ class Node:
 
         Args:
             Value: Must be an integer
-            Nodes: must not be empty
+            Nodes: must be an objct.
         """
         self.__data = None
         self.data = data
@@ -74,32 +74,32 @@ class SinglyLinkedList:
 
     def __init__(self):
         """Initializes an empty singly linked list."""
-        self._head = None
+        self.__head = None
 
     def is_empty(self):
         """Check if the linked list is empty."""
-        return self._head is None
+        return self.__head is None
 
     def append(self, data):
         """Add new node with the given data to the end of the linked list."""
         new_node = Node(data)
         if self.is_empty():
-            self._head = new_node
+            self.__head = new_node
         else:
-            current_node = self._head
+            current_node = self.__head
             while current_node.next_node is not None:
                 current_node = current_node.next_node
             current_node.next_node = new_node
 
-    def sorted.insert(self, value):
+    def sorted_insert(self, value):
         """Insert a new node into the correct sorted position
         in the linked list."""
         new_node = Node(value)
-        if self.is_empty() or value < self._head.data:
-            new_node.next_node = self._head
-            self._head = new_node
+        if self.is_empty() or value < self.__head.data:
+            new_node.next_node = self.__head
+            self.__head = new_node
         else:
-            current_node = self._head
+            current_node = self.__head
             while (current_node.next_node is not None) and \
                     (current_node.next_node < value):
                 current_node = current_node.next_node
@@ -108,25 +108,8 @@ class SinglyLinkedList:
 
     def display(self):
         """Display the element of the linked list."""
-        current_node = self._head
+        current_node = self.__head
         while current_node is not None:
             print(current_node.data, end=" -> ")
             current_node = current_node.next_node
         print("None")
-
-
-if __name__ == "__main__":
-
-    sll = SinglyLinkedList()
-    sll.sorted_insert(2)
-    sll.sorted_insert(5)
-    sll.sorted_insert(3)
-    sll.sorted_insert(10)
-    sll.sorted_insert(1)
-    sll.sorted_insert(-4)
-    sll.sorted_insert(-3)
-    sll.sorted_insert(4)
-    sll.sorted_insert(5)
-    sll.sorted_insert(12)
-    sll.sorted_insert(3)
-    print(sll)
