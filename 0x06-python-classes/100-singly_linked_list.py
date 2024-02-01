@@ -121,4 +121,4 @@ class SinglyLinkedList:
         while current_node is not None:
             element.append(str(current_node.data))
             current_node = current_node.next_node
-        return " -> ".join(element) + '\n'
+        return "\n".join(element) + "\n"
