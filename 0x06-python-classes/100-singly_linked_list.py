@@ -113,3 +113,12 @@ class SinglyLinkedList:
             print(current_node.data, end=" -> ")
             current_node = current_node.next_node
         print("None")
+
+    def __str__(self):
+        """Return a string representation of the linked list."""
+        current_node = self.__head
+        element = []
+        while current_node is not None:
+            element.append(str(current_node.data))
+            current_node = current_node.next_node
+        return " -> ".join(element) + " -> None"
