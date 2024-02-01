@@ -90,7 +90,7 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1 == rect_2:
-            return rect_1
+            return rect_1 
 
         area_1 = rect_1.area()
         area_2 = rect_2.area()
@@ -104,9 +104,3 @@ class Rectangle:
     def square(cls, size=0):
         """Return a new Rectangle instance with width == height == size."""
         return cls(size, size)
-
-    try:
-        mysquare = Rectangle.square(-2)
-        print("{} / {}".format(mysquare.width, mysquare.height))
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
