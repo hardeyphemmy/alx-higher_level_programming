@@ -5,12 +5,12 @@
 const numSquare = parseInt(process.argv[2]);
 
 if (!isNaN(numSquare)) {
-  for (let i = 0; i**2; i++) {
-    let line = 'x';
+  for (let i = 0; i < numSquare; i++) {
+    let row = '';
     for (let j = 0; j < numSquare; j++) {
-      line += 'x';
+      row += 'x';
     }
-    console.log('x');
+    console.log('row');
   }
 } else {
   console.log('Missing size');
