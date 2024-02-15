@@ -20,6 +20,12 @@ class Rectangle {
     }
   }
 
+  // rotate method to exchange the width and rectangle
+  rotate () {
+    // swap the values of width and height
+    [this.width, this.height] = [this.height, this.width];
+  }
+
   // double method that multiplies the width and height by 2
   double () {
     // multiply width and height by 2
