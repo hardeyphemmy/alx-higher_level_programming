@@ -8,7 +8,8 @@ class Rectangle {
     this.width = w;
     this.height = h;
   }
-	// method to print rectangle using x char
+
+  // method to print rectangle using x char
   print () {
     // iterate each row
     for (let i = 0; i < this.height; i++) {
@@ -17,6 +18,13 @@ class Rectangle {
       // print row
       console.log(row);
     }
+  }
+
+  // double method that multiplies the width and height by 2
+  double () {
+    // multiply width and height by 2
+    this.width *= 2;
+    this.height *= 2;
   }
 }
 
