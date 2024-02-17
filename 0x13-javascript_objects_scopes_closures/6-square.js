@@ -33,9 +33,11 @@ class Rectangle {
     this.height *= 2;
   }
 }
+// Import Square from 5-square
+const ParentSquare = require('./5-square');
 
-// class square extends Rectangle
-class Square extends Rectangle {
+// Define class square extends parentsquare
+class Square extends ParentSquare {
   constructor (size) {
     // call constructor of the parent class with size
     super(size, size);
