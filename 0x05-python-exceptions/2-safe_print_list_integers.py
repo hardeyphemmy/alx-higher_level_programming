@@ -3,8 +3,6 @@ def safe_print_list_integers(my_list=[], x=0):
     count = 0
     try:
         for item in my_list:
-            if count >= x:
-                break
             try:
                 print("{:d}".format(item), end="")
                 count += 1
@@ -12,6 +10,8 @@ def safe_print_list_integers(my_list=[], x=0):
                 pass
     except (ValueError, TypeError):
         pass
+    if count > x:
+        raise IndexError("x exceeds the length of the list")
     print("")
     return count
 
