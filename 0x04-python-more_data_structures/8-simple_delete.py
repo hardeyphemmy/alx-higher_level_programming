@@ -5,6 +5,7 @@ def simple_delete(a_dictionary, key=""):
         del a_dictionary[key]
     return a_dictionary
 
+
 def print_sorted_dictionary(a_dictionary):
     sorted_keys = sorted(a_dictionary.keys())
     for key in sorted_keys:
