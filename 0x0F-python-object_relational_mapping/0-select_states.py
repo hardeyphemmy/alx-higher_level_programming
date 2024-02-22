@@ -7,8 +7,7 @@ import MySQLdb
 if len(sys.argv) != 4:
     print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
     sys.exit(1)
-# Extract credentials
-username, password, database = sys.argv[1:]
+# Extract credentials username, password, database = sys.argv[1:2]
 
 try:
     # connect to MySQL database
@@ -29,8 +28,8 @@ try:
 
     # print the list of states
     print("List of states:")
-    for row in rows:
-        print("{}: {}".format(row[0], row[1]))
+    for row in rows[:5]:
+            print("({}, '{}')".format(row[0], row[1]))
 
     # close cursor and database connection
     cursor.close()
