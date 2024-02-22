@@ -14,8 +14,8 @@ try:
     # connect to MySQL database
     db = MySQLdb.connect(host="localhost",
                         user="root",
-                        passwd="root",
-                        db="my_db",
+                        passwd="Phemmygmail@104",
+                        db="hbtn_0e_0_usa",
                         port=3306)
 
     # create a cursor object to execute queries
