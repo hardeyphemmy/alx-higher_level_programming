@@ -12,6 +12,7 @@ def main():
 
         # Extract credentials
         username, password, database = sys.argv[1:]
+
     try:
         # Connect to MySQL database
         db = MySQLdb.connect(host="localhost",
