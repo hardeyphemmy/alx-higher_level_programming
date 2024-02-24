@@ -38,3 +38,7 @@ if len(sys.argv) != 4:
 
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
+
+
+if __name__ == "__main__":
+    main()
