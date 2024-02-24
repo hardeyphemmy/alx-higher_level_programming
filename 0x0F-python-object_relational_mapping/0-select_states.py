@@ -22,7 +22,7 @@ if len(sys.argv) != 4:
         cursor = db.cursor()
 
         # Execute SQL query to retrieve all states
-        cursor.execute("SELECT * FROM states ORDER BY id ASC")
+        cursor.execute("SELECT * FROM states ORDER BY id ASC LIMIT 2")
 
         # Fetch all rows from the result set
         rows = cursor.fetchall()[:5]
