@@ -3,6 +3,7 @@
 import sys
 import MySQLdb
 
+
 def main():
     # Check if the number of arguments is correct
     if len(sys.argv) != 4:
@@ -26,7 +27,7 @@ def main():
         cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
         # Fetch all rows from the result set
-        rows = cursor.fetchall()[:2]  # Limiting to 2 rows as per expected output
+        rows = cursor.fetchall()[:2]  # Limiting to 2 rows as per expected
 
         # Print the list of states
         print("List of states:")
@@ -40,6 +41,6 @@ def main():
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
 
+
 if __name__ == "__main__":
     main()
-
