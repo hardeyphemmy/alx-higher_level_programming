@@ -17,15 +17,15 @@ def main():
     try:
         """Connect to MySQL database."""
         db = MySQLdb.connect(host="localhost",
-                             user=username,
-                             passwd=password,
-                             db=database,
+                             user="root",
+                             passwd="Phemmygmail@104",
+                             db="hbtn_0e_0_usa",
                              port=3306)
         """Create cursor object."""
         cur = db.cursor()
         """Execute SQL query."""
         cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER\
-                    BY id ASC")
+                    BY id ASC LIMIT 2")
         """Fetch all rows."""
         rows = cur.fetchall()
         """Print list of states."""
@@ -38,3 +38,7 @@ def main():
         db.close()
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
+
+
+if __name__ == "__main__":
+    main()
