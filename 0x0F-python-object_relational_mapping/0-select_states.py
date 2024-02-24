@@ -15,9 +15,9 @@ def main():
     try:
         # Connect to MySQL database
         db = MySQLdb.connect(host="localhost",
-                             user=username,
-                             passwd=password,
-                             db=database,
+                             user="root",
+                             passwd="Phemmygmail@104",
+                             db="hbtn_0e_0_usa",
                              port=3306)
 
         # Create a cursor object to execute queries
