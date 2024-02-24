@@ -25,7 +25,7 @@ def main():
         cur = db.cursor()
         """Execute SQL query."""
         cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER\
-                    BY id ASC LIMIT 2")
+                    BY id ASC")
         """Fetch all rows."""
         rows = cur.fetchall()
         """Print list of states."""
