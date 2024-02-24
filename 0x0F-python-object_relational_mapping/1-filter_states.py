@@ -24,8 +24,8 @@ def main():
         """Create cursor object."""
         cur = db.cursor()
         """Execute SQL query."""
-        cur.execute("SELECT * FROM states WHERE name LIKE 'N%' OR name LIKE\
-                'n%' ORDER BY id ASC")
+        cur.execute("SELECT * FROM states WHERE name ILIKE 'N%'\
+               ORDER BY id ASC")
         """Fetch all rows."""
         rows = cur.fetchall()
         """Print list of states."""
