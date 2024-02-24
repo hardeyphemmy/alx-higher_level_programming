@@ -9,7 +9,7 @@ def main():
     """Check correct number of arguments"""
     if len(sys.argv) != 4:
         print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        return
+        sys.exit(1)
 
     """Extract credentials."""
     username, password, database = sys.argv[1:]
