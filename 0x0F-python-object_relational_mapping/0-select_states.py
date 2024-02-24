@@ -25,7 +25,7 @@ if len(sys.argv) != 4:
         cursor.execute("SELECT * FROM states ORDER BY id ASC LIMIT 2")
 
         # Fetch all rows from the result set
-        rows = cursor.fetchall()[:5]
+        rows = cursor.fetchall()
 
         # Print the list of states
         print("List of states:")
