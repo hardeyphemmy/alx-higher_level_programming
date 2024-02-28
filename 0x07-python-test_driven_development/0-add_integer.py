@@ -18,6 +18,11 @@ def add_integer(a, b=98):
     b = int(b) if isinstance(b, float) else b
     return (a + b)
 
+    # Ensure 'b' is an integer
+    if not isinstance(b, int):
+        raise TypeError("'b' must be an integer")
+    return (a + b)
+
 
 if __name__ == "__main__":
     print(add_integer(1, 2))
