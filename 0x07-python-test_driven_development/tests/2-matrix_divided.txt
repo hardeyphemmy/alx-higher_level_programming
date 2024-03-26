@@ -15,24 +15,13 @@ Class TestMatrixDivided(unittest.TestCase)
 >>> print(matrix)
 [[1, 2, 3], [4, 5, 6]]
 
-``matrix_divided()`` expect that both arguments are either integer or float
+``matrix_divided()`` matrix is a list of lists of integers and div is a string
 
->>> matrix is a list of lists of integers and div is a string
-    Traceback (most recent call last):
-      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
-        exec(compile(example.source, filename, "single",
-      File "", line 1
-        matrix= List of Lists of integers / div= string
-        ^
-    IndentationError: unexpected indent
-   TypeError: div must be a number
+>>>  matrix= List of Lists of integers / div= string
+
+TypeError: div must be a number
 
 ``matrix_divided()`` expect that both arguments must not be equal to zero
-  Traceback (most recent call last):
-      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
-        exec(compile(example.source, filename, "single",
-      File "", line 1
-        matrix= List of Lists of int...
 
 >>>  matrix= List of Lists of integers / div= 0 
 ZeroDivisionError: division by zero
