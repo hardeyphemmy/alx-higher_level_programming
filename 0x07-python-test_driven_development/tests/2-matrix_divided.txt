@@ -17,7 +17,7 @@ Class TestMatrixDivided(unittest.TestCase)
 
 ``matrix_divided()`` expect that both arguments are either integer or float
 
->>>  matrix= List of Lists of integers / div= string
+>>> matrix= List of Lists of integers / div= string
     Traceback (most recent call last):
       File "/usr/lib/python3.8/doctest.py", line 1336, in __run
         exec(compile(example.source, filename, "single",
