@@ -12,16 +12,16 @@ def text_indentation(text):
         TypeError: if text is not  string."""
 
     if not (isinstance(text, str)):
-        rasie TypeError("text must be a string")
+        raise TypeError("text must be a string")
 
         puntuation_marks = {'.', '?', ':'}
         start_of_line = True
 
         for char in text:
             if start_of_line and char == ' ':
-                continue # to skip space
+                continue ''' to skip space'''
             elif char == '\n':
-                start_of_line = True #reset if newline character is encountered
+                start_of_line = True '''reset if newline character is encountered'''
             else:
                 print(char, end='')
                 start_of_line = False
