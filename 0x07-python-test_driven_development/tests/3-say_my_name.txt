@@ -15,4 +15,5 @@ My name is Bob
 
 ``say_my_name`` expects arguments to be a string
 >>> say_my_name(12, "White")
-TypeError: first_name must be a string
+        raise TypeError("first_name must be a string")
+    TypeError: first_name must be a string
