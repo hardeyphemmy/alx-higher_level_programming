@@ -21,12 +21,13 @@ def text_indentation(text):
             if start_of_line and char == ' ':
                 continue ''' to skip space'''
             elif char == '\n':
-                start_of_line = True '''reset if newline character is encountered'''
+                start_of_line = True '''reset if newline char is encountered'''
             else:
                 print(char, end='')
                 start_of_line = False
                 if char in punctuation_marks:
                     print('\n\n', end'')
+
 
 if __name__ == "__main__":
     text_indentation("""
