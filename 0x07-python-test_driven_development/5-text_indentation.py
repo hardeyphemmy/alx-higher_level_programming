@@ -20,12 +20,9 @@ def text_indentation(text):
     while c < len(text):
         print(text[c], end="")
         if text[c] == "\n" or text[c] in ".?:":
-            if text[c] in ".?:":
-                print("\n")
-            c += 0
-            while c <= len(text) and text[c] == ' ':
-                c += 1
-                continue
+            print("\n\n", end="")
+        elif text[c] == "\n":
+            print("\n", end"")
         c += 1
 
 
