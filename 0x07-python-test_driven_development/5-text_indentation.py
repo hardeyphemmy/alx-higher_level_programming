@@ -23,6 +23,8 @@ def text_indentation(text):
             print("\n\n", end="")
         elif text[c] == "\n":
             print("\n", end"")
+       
+                continue
         c += 1
 
 
