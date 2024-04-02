@@ -1,17 +1,18 @@
 import unittest
 from 3-say_my_name import say_my_name
 
-Class TestSayMyName(unittest.TestCase)
+Class TestSayMyName(unittest.TestCase):
 """Testing the function."""
    def test_say_my_name(self)
+
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 >>> say_my_name("John", "Smith")
-My name is John Smith.
+My name is John Smith
 >>> say_my_name("Walter", "White")
-My name is Walter White.
+My name is Walter White
 >>> say_my_name("Bob")
-My name is Bob .
+My name is Bob
 
 ``say_my_name`` expects arguments to be a string
 >>> say_my_name(12, "White")
-TypeError: first_name must be string
+TypeError: first_name must be a string
