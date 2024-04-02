@@ -14,7 +14,7 @@ def text_indentation(text):
     if not (isinstance(text, str)):
         raise TypeError("text must be a string")
 
-        puntuation_marks = {'.', '?', ':'}
+        punctuation_marks = {'.', '?', ':'}
         start_of_line = True
 
         for char in text:
