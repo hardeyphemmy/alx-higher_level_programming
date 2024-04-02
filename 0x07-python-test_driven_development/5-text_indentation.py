@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""The function that prints a text."""
+"""The module that prints a text."""
 
 
 def text_indentation(text):
-    """Print a text
+    """Print a function text
 
     Arg:
         text(str): text must be a string
@@ -26,7 +26,7 @@ def text_indentation(text):
                 print(char, end='')
                 start_of_line = False
                 if char in punctuation_marks:
-                    print('\n\n', end'')
+                    print('\n\n', end='')
 
 
 if __name__ == "__main__":
