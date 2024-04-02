@@ -12,22 +12,21 @@ def text_indentation(text):
         TypeError: if text is not  string."""
 
     if not (isinstance(text, str)):
-        raise TypeError("text must be a string.")
-    c = 0
-    while c <= len(text) and text[c] == ' ':
-        c += 1
+        rasie TypeError("text must be a string")
 
-    while c < len(text):
-        print(text[c], end="")
-        if text[c] == "\n" or text[c] in ".?:":
-            if text[c] in ".?:":
-                print("\n")
-            c += 0
-            while c <= len(text) and text[c] == ' ':
-                c += 1
-                continue
-        c += 1
+        puntuation_marks = {'.', '?', ':'}
+        start_of_line = True
 
+        for char in text:
+            if start_of_line and char == ' ':
+                continue # to skip space
+            elif char == '\n':
+                start_of_line = True #reset if newline character is encountered
+            else:
+                print(char, end='')
+                start_of_line = False
+                if char in punctuation_marks:
+                    print('\n\n', end'')
 
 if __name__ == "__main__":
     text_indentation("""
