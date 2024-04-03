@@ -1,0 +1,54 @@
+import unittest
+
+lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+class TestLazyMatrixMul(unittest.TestCase):
+    """Test cases for the lazy_matrix_mul function."""
+
+    def test_different_dimensions(self):
+        """Test case for matrices with different dimensions."""
+        m_a = [[1, 2]]
+        m_b = [[3, 4], [5, 6]]
+        self.assertRaises(ValueError, lazy_matrix_mul, m_a, m_b)
+
+    def test_not_lists(self):
+        """Test case for inputs that are not lists."""
+        m_a = 1
+        m_b = [[3, 4], [5, 6]]
+        self.assertRaises(ValueError, lazy_matrix_mul, m_a, m_b)
+
+    def test_empty_matrices(self):
+        """Test case for empty matrices."""
+        m_a = []
+        m_b = [[]]
+        self.assertRaises(ValueError, lazy_matrix_mul, m_a, m_b)
+
+    def test_none_matrices(self):
+        """Test case for None inputs."""
+        m_a = None
+        m_b = None
+        self.assertRaises(ValueError, lazy_matrix_mul, m_a, m_b)
+
+    def test_not_rectangles(self):
+        """Test case for matrices that are not rectangles."""
+        m_a = [[1, 2], [3, 4, 5]]
+        m_b = [[1, 2], [3, 4]]
+        self.assertRaises(ValueError, lazy_matrix_mul, m_a, m_b)
+
+    def test_integers(self):
+        """Test case for matrices with integers."""
+        m_a = [[1, 2], [3, 4]]
+        m_b = [[5, 6], [7, 8]]
+        result = lazy_matrix_mul(m_a, m_b)
+        self.assertEqual(result, [[19, 22], [43, 50]])
+
+    def test_floats(self):
+        """Test case for matrices with floats."""
+        m_a = [[1.0, 2.0], [3.0, 4.0]]
+        m_b = [[5.0, 6.0], [7.0, 8.0]]
+        result = lazy_matrix_mul(m_a, m_b)
+        self.assertEqual(result, [[19.0, 22.0], [43.0, 50.0]])
+
+
+if __name__ == '__main__':
+    unittest.main()
