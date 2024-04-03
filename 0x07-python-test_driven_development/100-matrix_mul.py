@@ -36,7 +36,7 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a should contain only integers or floats")
     if not all(isinstance(val, (int, float)) for row in m_b for val in row):
         raise TypeError("m_b should contain only integers or floats")
-    # check if all row have the same size
+    # check if all row have the same size or not
     if not all(len(row) == len(m_a[0]) for row in m_a):
         raise TypeError("Each row of m_a must be of the same size")
     if not all(len(row) == len(m_b[0]) for row in m_b):
