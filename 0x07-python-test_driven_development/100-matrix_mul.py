@@ -38,19 +38,17 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_b should contain only integers or floats")
     # check if all row have the same size or not
     if not all(len(row) == len(m_a[0]) for row in m_a):
-        raise TypeError("Each row of m_a must be of the same size")
+        raise TypeError("each row of m_a must be of the same size")
     if not all(len(row) == len(m_b[0]) for row in m_b):
-        raise TypeError("Each row of m_b must be of the same size")
+        raise TypeError("each row of m_b must be of the same size")
     # check if matrices can't be multiplied
 
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
-    result = [[0 for _ in range(len(m_b[0]))] for _ in range(len(m_a))]
-    for i in range(len(m_a)):
-        for j in range(len(m_b[0])):
-            for k in range(len(m_b)):
-                result[i][j] += m_a[i][k] * m_b[k][j]
+    # perform matrix multiplication
+    result = [[sum(a * b for a, b in zip(row_a, col_b)) for col_b in
+               ''zip(*m_b)] for row_a in m_a]''
 
     return result
 
