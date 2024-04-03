@@ -60,7 +60,7 @@ class TestMatrixMul(unittest.TestCase):
         self.assertEqual(result, [[19.0, 22.0], [43.0, 50.0]])
 
     def test_size(self):
-	"""Test case for matrices different same size."""
+	"""Test case for matrices with different dimensions."""
 	m_a = [[5, 6, 10], [7, 8]]
 	m_b = [[5, 6], [7, 8]]
 	with self.assertRaises(TypeError) as context:
@@ -68,7 +68,7 @@ class TestMatrixMul(unittest.TestCase):
         self.assertEqual(str(context.exception), "m_a must be a of the same size")
 
     def test_size(self):
-        """Test case for matrices different same size."""
+        """Test case for matrices with different dimensions."""
         m_a = [[5, 6], [7, 8]]
         m_b = [[5, 6, 1], [7, 8]]
         with self.assertRaises(TypeError) as context:
