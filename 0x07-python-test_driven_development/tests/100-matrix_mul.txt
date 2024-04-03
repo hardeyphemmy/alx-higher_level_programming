@@ -63,7 +63,7 @@ class TestMatrixMul(unittest.TestCase):
         self.assertEqual(str(context.exception), "m_a should contain only integers or floats")
 
     def test_m_b_invalid_elements(self):
-        """Test case for when m_b contains invalid elements."""
+        """Test case for when m_b contains a invalid elements."""
         m_a = [[1, 2], [3, 4]]
         m_b = [[1, 2], [3, "4"]]
         with self.assertRaises(TypeError) as context:
