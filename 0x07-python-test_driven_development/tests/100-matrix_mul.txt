@@ -25,31 +25,6 @@ class TestMatrixMul(unittest.TestCase):
         """Test case for empty matrices."""
         m_a = []
         m_b = [[]]
-matrix_mul = __import__('100-matrix_mul').matrix_mul
-
-class TestMatrixMul(unittest.TestCase):
-    """Test cases for the matrix_mul function."""
-
-    def test_different_dimensions(self):
-        """Test case for matrices with different dimensions."""
-        m_a = [[1, 2]]
-        m_b = [[3, 4], [5, 6]]
-        with self.assertRaises(ValueError) as context:
-            matrix_mul(m_a, m_b)
-        self.assertEqual(str(context.exception), "m_a and m_b can't be multiplied")
-
-    def test_not_lists(self):
-        """Test case for inputs that are not lists."""
-        m_a = 1
-        m_b = [[3, 4], [5, 6]]
-        with self.assertRaises(TypeError) as context:
-            matrix_mul(m_a, m_b)
-        self.assertEqual(str(context.exception), "m_a must be a list")
-
-    def test_empty_matrices(self):
-        """Test case for empty matrices."""
-        m_a = []
-        m_b = [[]]
         with self.assertRaises(ValueError) as context:
             matrix_mul(m_a, m_b)
         self.assertEqual(str(context.exception), "m_a can't be empty")
@@ -83,6 +58,23 @@ class TestMatrixMul(unittest.TestCase):
         m_b = [[5.0, 6.0], [7.0, 8.0]]
         result = matrix_mul(m_a, m_b)
         self.assertEqual(result, [[19.0, 22.0], [43.0, 50.0]])
+
+    def test_size(self):
+	"""Test case for matrices different same size."""
+	m_a = [[5, 6, 10], [7, 8]]
+	m_b = [[5, 6], [7, 8]]
+	with self.assertRaises(TypeError) as context:
+            matrix_mul(m_a, m_b)
+        self.assertEqual(str(context.exception), "m_a must be a of the same size")
+
+    def test_size(self):
+        """Test case for matrices different same size."""
+        m_a = [[5, 6], [7, 8]]
+        m_b = [[5, 6, 1], [7, 8]]
+        with self.assertRaises(TypeError) as context:
+            matrix_mul(m_a, m_b)
+        self.assertEqual(str(context.exception), "m_b must be a of the same size")
+
 
 if __name__ == '__main__':
     unittest.main()
