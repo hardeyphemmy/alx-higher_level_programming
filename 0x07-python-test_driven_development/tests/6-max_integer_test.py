@@ -46,6 +46,14 @@ class TestMaxInteger(unittest.TestCase):
         """Test that max_integer returns the maximum value correctly when there are duplicate values in the list."""
         self.assertEqual(max_integer([4, 7, 4, 2, 7]), 7)
 
+    def test_max_at_beginning(self):
+        """Test that max_integer returns the correct maximum value when the maximum value is at the beginning of the list."""
+        self.assertEqual(max_integer([10,5,7,3,8]), 10)
+
+    def test_max_in_middle(self):
+        """Test that max_integer returns the correct maximum value when the maximum value is in the middle of the list."""
+        self.assertEqual(max_integer([3,8,5,12,5,2]), 12)
+
 
 
 if __name__ == '__main__':
