@@ -19,7 +19,7 @@ def inherits_from(obj, a_class):
     obj_class = obj.__class__
 
     # Check if the object's class is a subclass of a_class
-    return issubclass(obj_class, a_class)
+    return issubclass(obj_class, a_class) and obj_class != a_class
 
 
 if __name__ == "__main__":
