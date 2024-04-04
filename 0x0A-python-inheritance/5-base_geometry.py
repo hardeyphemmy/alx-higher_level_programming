@@ -3,6 +3,7 @@
 
 
 class BaseGeometry:
+    """This is a class of the BaseGeomentry"""
     pass
 
 
