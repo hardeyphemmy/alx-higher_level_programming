@@ -6,11 +6,11 @@ class TestBaseGeomentry(unittest.TestCase):
 	# Create an instance of BaseGeometry
 	geometry = BaseGeometry()
 	
-	# Call the area method amd assert it raises a NotImplementedError
+	# Call the area method and assert it raises an Exception
 	with self.assertRaises(Exception) as context:
 	    geometry.area()
 
-	# Check if the NotImplementedError has the correct message
+	# Check if Exception has the correct message
 	self.assertEqual(str(context.exception), "area() is not implemented")
 
     def test_integer_validator(self):
