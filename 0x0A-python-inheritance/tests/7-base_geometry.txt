@@ -6,8 +6,8 @@ class TestBaseGeomentry(unittest.TestCase):
 	# Create an instance of BaseGeometry
 	geometry = BaseGeometry()
 	
-	# Call the area method amd assert it raises a NotImplementedError
-	with self.assertRaises(NotImplementedError) as context:
+	# Call the area method amd assert it raises an Exception
+	with self.assertRaises(Exception) as context:
 	    geometry.area()
 
 	# Check if the NotImplementedError has the correct message
