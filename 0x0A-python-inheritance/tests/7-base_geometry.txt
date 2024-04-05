@@ -2,6 +2,14 @@ import unittest
 
 class TestBaseGeomentry(unittest.TestCase):
 
+    
+    def test_instantiation(self):
+	# Attempt to create an instance of BaseGeometry
+	geometry = BaseGeometry
+
+	# Check if the instance is crreated successfully
+	self.assertIsInstance(geometry, Basegeometry)
+
     def test_area_not_implemented(self):
 	# Create an instance of BaseGeometry
 	geometry = BaseGeometry()
