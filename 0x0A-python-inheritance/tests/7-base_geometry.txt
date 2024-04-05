@@ -33,3 +33,7 @@ class TestBaseGeomentry(unittest.TestCase):
 	
 	# Check if the raised ValueError has the correct message
 	self.assertEqual(str(context.exception), "test_int must be greater than 0")
+
+
+if __name__ == "__main__":
+    unittest.main()
