@@ -11,9 +11,11 @@ class BaseGeometry:
         Exception: If the area calculation is not impemented.
     """
 
+    def __init__(self):
+        """Initialize the BaseGeometry instance."""
+
     def area(self):
         raise Exception("area() is not implemented")
-
 
     def integer_validator(self, name, value):
         """
