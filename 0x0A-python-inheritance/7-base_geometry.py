@@ -10,11 +10,11 @@ class BaseGeometry:
     Raises:
         Exception: If the area calculation is not impemented.
     """
-    @staticmethod
+
     def area(self):
         raise Exception("area() is not implemented")
 
-    @staticmethod
+
     def integer_validator(self, name, value):
         """
         validates the value making sure it is an integer.
