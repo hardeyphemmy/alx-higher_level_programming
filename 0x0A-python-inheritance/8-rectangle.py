@@ -47,6 +47,8 @@ class Rectangle(BaseGeometry):
             width(int): The width of the rectangle.
             height(int): The height of a rectangle.
         """
+        super().__init__()
+        """Call the parent class __init__method"""
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
