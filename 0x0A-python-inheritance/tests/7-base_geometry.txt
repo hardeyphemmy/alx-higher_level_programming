@@ -1,0 +1,35 @@
+import unittest
+
+class TestBaseGeomentry(unittest.TestCase):
+
+    def test_area_not_implemented(self):
+	# Create an instance of BaseGeometry
+	geometry = BaseGeometry()
+	
+	# Call the area method amd assert it raises a NotImplementedError
+	with self.assertRaises(NotImplementedError) as context:
+	    geometry.area()
+
+	# Check if the NotImplementedError has the correct message
+	self.assertEqual(str(context.exception), "area() is not implemented")
+
+    def test_integer_validator(self):
+	# Create an instance of BaseGeometry
+	geometry = BaseGeometry()
+
+	# Test valid value
+	geometry.integer_validator("test_int", 5)
+
+	# Test invalid non-integer value
+	with self.assertRaises(TypeError) as context:
+	    geometry.integer_validator("test_int", "string")
+	
+	# Check if the raised TypeError has the correct message
+	self.assertEqual(str(context.exception), "test_int must be an integer")
+
+	# Test invalid negative integer value
+	with self.assertRaises(ValueError) as context:
+	   geometry.integer_validator("test_int", -5)
+	
+	# Check if the raised ValueError has the correct message
+	self.assertEqual(str(context.exception), "test_int must be greater than 0")
