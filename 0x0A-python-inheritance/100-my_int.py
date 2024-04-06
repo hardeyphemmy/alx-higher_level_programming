@@ -101,6 +101,7 @@ class Square(Rectangle):
 
 
 class MyInt(int):
+    """This is a class of Myint inherited from int"""
     def __eq__(self, other):
         """ Swap behavior: return the negation of the usual equality
         comparison"""
