@@ -97,7 +97,7 @@ class Square(Rectangle):
         """return the square representation.
         [square] <width/height>
         """
-        return f"[square] {self.size}/{self.size}"
+        return f"[square] {self.__size}/{self.__size}"
 
 
 if __name__ == "__main__":
