@@ -12,9 +12,9 @@ def save_to_json_file(my_obj, filename):
         filename(str0: The file to be save
     """
     if isinstance(my_obj, set):
-        my_obj = list(my_obj)
+        raise TypeError("Object of type set is not JSON serializable")
 
-    with open(filename, "w") as file:
+    with open(filename, "w", encoding="utf-8") as file:
         json.dump(my_obj, file)
 
 
