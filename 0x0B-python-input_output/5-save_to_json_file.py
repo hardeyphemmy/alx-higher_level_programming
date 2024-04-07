@@ -14,8 +14,11 @@ def save_to_json_file(my_obj, filename):
     if isinstance(my_obj, set):
         raise TypeError("Object of type set is not JSON serializable")
 
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(my_obj, file)
+    try:
+        with open(filename, "w", encoding="utf-8") as file:
+            json.dump(my_obj, file)
+    except PermissionError as e:
+        raise PermissionError(f"[PermissionError] {e}")
 
 
 if __name__ == "__main__":
