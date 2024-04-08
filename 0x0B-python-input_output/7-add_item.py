@@ -26,6 +26,9 @@ def load_from_json_file(filename):
 args = sys.argv[1:]
 args_list = args
 
+""" Append new item to the existing list"""
+loaded_list.extend(args_list)
+
 """Save the list to a JSON file named 'add_item.json'"""
 filename = 'add_item.json'
 save_to_json_file(args_list, filename)
