@@ -28,4 +28,3 @@ save_to_json_file(args_list, filename)
 
 """ Load the list from the JSON file"""
 loaded_list = load_from_json_file(filename)
-print(loaded_list)
