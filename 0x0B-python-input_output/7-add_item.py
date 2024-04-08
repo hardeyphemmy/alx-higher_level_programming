@@ -2,8 +2,8 @@
 """This module load,add and save to a file"""
 
 import sys
-from 5-save_to_json_file.py import save_to_json_file
-from 6-load_from_json_file.py import load_from_json_file
+from save_to_json_file.py import save_to_json_file
+from load_from_json_file.py import load_from_json_file
 
 
 def save_to_json_file(*args):
