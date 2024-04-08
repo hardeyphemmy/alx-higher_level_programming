@@ -18,7 +18,8 @@ def save_to_json_file(my_obj, filename):
         with open(filename, "w", encoding="utf-8") as file:
             json.dump(my_obj, file)
     except PermissionError as e:
-        raise PermissionError(f"[PermissionError] {e}")
+        raise PermissionError(f"[PermissionError] [Errno 13]\
+                Permission denied: {filename}")
 
 
 if __name__ == "__main__":
