@@ -25,9 +25,7 @@ args_list = args
 """Save the list to a JSON file named 'add_item.json'"""
 filename = 'add_item.json'
 save_to_json_file(args_list, filename)
-print(f"Arguments saved to {filename}")
 
 """ Load the list from the JSON file"""
 loaded_list = load_from_json_file(filename)
-print(f"Loaded list from {filename}:")
 print(loaded_list)
