@@ -2,38 +2,32 @@
 """This module load,add and save to a file"""
 
 import sys
-from 5-save_to_json_file import save_to_json_file
-from 6-load_from_json_file import load_from_json_file
+import json
 
+""" Load functions from previous exercises"""
+def save_to_json_file(my_obj, filename):
+    """Writes an object to a text file using JSON representation"""
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
 
-def save_to_json_file(*args):
-    """
-    This function is to save argument to a python file to a file
-    named 'add_item.json'.
-    Args:
-        *args: argument list to be saved
-    """
-    arguments_list = list(args)
-    save_to_json_file(arguments_list, "add_item.json")
+def load_from_json_file(filename):
+    """Loads a JSON object from a file"""
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Error: file '{filename}' not found")
 
+"""Create a list from command-line arguments"""
+args = sys.argv[1:]
+args_list = args
 
-def load_from_json_file():
-    """This function loads arguments from a named file 'add_item.json'.
-    Returns
-        list: The list of argument loaded from the file
-    """
-    return load_from_json_file("add_item.json")
+"""Save the list to a JSON file named 'add_item.json'"""
+filename = 'add_item.json'
+save_to_json_file(args_list, filename)
+print(f"Arguments saved to {filename}")
 
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("usage: python script.py arg1 agr2 ...")
-        sys.exit(1)
-
-        arguments = sys.argv[1:]
-
-        save_arguments_to_file(*arguments)
-        print("Arguments saved to add_item.json")
-
-        loaded_arguments = load_arguments_from_file()
-        print("Arguments loaded from file:", loaded_arguments)
+""" Load the list from the JSON file"""
+loaded_list = load_from_json_file(filename)
+print(f"Loaded list from {filename}:")
+print(loaded_list)
