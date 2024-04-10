@@ -15,7 +15,7 @@ def class_to_json(obj):
     """New dictionary to store processed attribute"""
     result = {}
     """Iterate over the attributes"""
-    for key, value in attributes.items():
+    for key, value in attribute.items():
         """check the type of the value"""
         if isinstance(value, (list, dict, str, int, bool)):
             """If value is a simple data type add to result dictionary"""
@@ -25,19 +25,3 @@ def class_to_json(obj):
             result[key] = str(value)
 
     return result
-
-
-if __name__ == "__main__":
-    """ My class module
-    """
-
-    class MyClass:
-        """ My class
-        """
-
-        def __init__(self, name):
-            self.name = name
-            self.number = 0
-
-        def __str__(self):
-            return "[MyClass] {} - {:d}".format(self.name, self.number)
