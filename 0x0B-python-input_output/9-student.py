@@ -26,8 +26,6 @@ class Student:
 
 
 if __name__ == "__main__":
-    Student = __import__('9-student').Student
-
     students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
 
     for student in students:
