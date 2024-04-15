@@ -39,8 +39,6 @@ class Student:
 
 
 if __name__ == "__main__":
-    import os
-    import sys
 
     Student = __import__('11-student').Student
     read_file = __import__('0-read_file').read_file
