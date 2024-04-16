@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """The module defines pascal"""
 
+
 def pascal_triangle(n):
     """The function return list of lists of integer representing pascal
     Args:
