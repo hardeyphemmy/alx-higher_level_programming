@@ -14,11 +14,11 @@ def append_after(filename="", search_string="", new_string=""):
     try:
         with open(filename, "r") as file:
             lines = file.readlines()
-    except FileNotFoundError:
-        print(f"Error: file '{filename}' not found")
 
         with open(filename, "w") as file:
             for line in lines:
                 file.write(line)
                 if search_string in line:
                     file.write(new_string)
+    except FileNotFoundError:
+        print(f"Error: file '{filename}' not found")
