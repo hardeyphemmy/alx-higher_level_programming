@@ -21,4 +21,4 @@ def append_after(filename="", search_string="", new_string=""):
                 if search_string in line:
                     file.write(new_string)
     except FileNotFoundError:
-        print(f"Error: file '{filename}' not found")
+        print(f"Error: FIleNotFoundError '{filename}'")
