@@ -77,7 +77,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self__.y = value
+        self.__y = value
 
     def area(self):
         """This function defines the area of the rectangle"""
