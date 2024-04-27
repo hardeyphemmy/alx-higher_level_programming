@@ -2,6 +2,7 @@
 """This is a module base."""
 import json
 
+
 class Base:
     """This is a class of all other classes in this project.
     manage attribute in all future classes.
@@ -65,7 +66,8 @@ class Base:
     def create(cls, **dictionary):
         """Return an instance of attribte set
         Args:
-            **dictionary(dict): Double pointer to a dictionary of key-value pair
+            **dictionary(dict): Double pointer to a dictionary of\
+                                key-value pair
         Returns:
             An instance already set
         """
