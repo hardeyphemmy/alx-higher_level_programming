@@ -2,6 +2,8 @@
 """The model Square inherited from Rectangle."""
 
 from models.rectangle import Rectangle
+
+
 class Square(Rectangle):
     """The class inherit from Rectangle"""
 
@@ -27,6 +29,6 @@ class Square(Rectangle):
         self.height = value
 
     def _str_(self):
+        """Return a string representation of the square"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.size)
-
