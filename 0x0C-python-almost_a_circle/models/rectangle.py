@@ -114,4 +114,4 @@ class Rectangle(Base):
                 if i == 0:
                     self.__id = arg
                 elif i < len(attrs):
-                    setattr(self, attrs[i], arg)
+                    setattr(self, f"__Rectangle__{attrs[i]}", arg)
