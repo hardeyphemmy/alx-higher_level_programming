@@ -110,4 +110,8 @@ class Rectangle(Base):
         if args:
             attrs = ['id', 'width', 'height', 'x', 'y']
             for i, arg in enumerate(args):
-                setattr(self, '__Rectangle__' + attrs[i], arg)
+                if i == 0:
+                    self.__id = arg
+                    print("OK")
+                else:
+                    setattr(self, '__Rectangle__' + attrs[i], arg)
