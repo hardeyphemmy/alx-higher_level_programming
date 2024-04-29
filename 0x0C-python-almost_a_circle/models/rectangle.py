@@ -92,12 +92,13 @@ class Rectangle(Base):
             print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.__id, self.__x,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.__id,
+                                                       self.__x,
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This function assign an argument to each attribute
         Args:
             *args(int): A list of arguments, in order
@@ -108,10 +109,15 @@ class Rectangle(Base):
             5th: y
         """
 
+        attrs = ['id', 'width', 'height', 'x', 'y']
         if args:
-            attrs = ['id', 'width', 'height', 'x', 'y']
             for i, arg in enumerate(args):
                 if i == 0:
                     self.__id = arg
                 elif i < len(attrs):
                     setattr(self, attrs[i], arg)
+
+        else:
+            for attr, value in kwargs.items():
+                if attr in attrs:
+                    setattr(self, attr, value)
