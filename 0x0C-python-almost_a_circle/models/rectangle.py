@@ -22,6 +22,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+        self.__id = id or 1
 
     @property
     def width(self):
@@ -91,7 +92,7 @@ class Rectangle(Base):
             print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.__id, self.__x,
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
@@ -112,6 +113,5 @@ class Rectangle(Base):
             for i, arg in enumerate(args):
                 if i == 0:
                     self.__id = arg
-                    print("OK")
-                else:
-                    setattr(self, '__Rectangle__' + attrs[i], arg)
+                elif i < len(attrs):
+                    setattr(self, attrs[i], arg)
