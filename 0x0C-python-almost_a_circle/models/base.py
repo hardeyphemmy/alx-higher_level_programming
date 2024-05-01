@@ -50,14 +50,14 @@ class Base:
             file.write(json_string)
 
     @staticmethod
-    def from_json_string(string):
+    def from_json_string(json_string):
         """Return list of the JSON representation
         Args:
             string(str): string representation of a list of dictionary
         Return:
             list: The list represented by JSON string
         """
-        if json_string is none or len(json_string) == []:
+        if json_string is None or len(json_string) == []:
             return []
         else:
             return json.loads(json_string)
