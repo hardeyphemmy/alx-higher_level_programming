@@ -72,11 +72,17 @@ class Base:
             An instance already set
         """
         if cls.__name__ == "Rectangle":
-            dummy = clas(1, 1)
+            dummy = cls(1, 1)
         elif cls.__name__ == "square":
             dummy = cls(1)
-        dummy.update(**dictionary)
-        return dummy
+        else:
+            dummy = None
+
+        if dummy:
+            dummy.update(**dictionary)
+            return dummy
+        else:
+            return None
 
     @classmethod
     def load_from_file(cls):
