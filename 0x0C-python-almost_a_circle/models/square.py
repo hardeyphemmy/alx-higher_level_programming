@@ -32,3 +32,20 @@ class Square(Rectangle):
         """Return a string representation of the square"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.size)
+
+    def update(self, *args, **kwargs):
+        """Update class  with ardument and keyword arguments
+        Args:
+            1st args = id
+            2nd args = size
+            3rd args = x
+            4th args = y
+        """
+        attrs = ['id', 'size', 'x', 'y']
+        if args:
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
+            else:
+                for attr, value in kwargs.items():
+                    if attr in self.__dict__.key():
+                        setattr(self, attr, value)
