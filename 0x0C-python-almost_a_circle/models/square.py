@@ -44,7 +44,8 @@ class Square(Base):
         if args:
             attrs = ['id', 'size', 'x', 'y']
             for i, arg in enumerate(args):
-                setattr(self, attrs[i], arg)
+                if i < len(attrs):
+                    setattr(self, attrs[i], arg)
         else:
             for attr, value in kwargs.items():
                 if 'id' in kwargs:
