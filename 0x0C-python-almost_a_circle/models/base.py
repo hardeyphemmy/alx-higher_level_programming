@@ -71,19 +71,19 @@ class Base:
         Returns:
             An instance already set
         """
-        if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
-        elif cls.__name__ == "square":
-            dummy = cls(1)
-        else:
-            dummy = None
+        from models.rectangle import Rectangle
+        from models.square import Square
 
-        if dummy:
-            dummy.update(**dictionary)
-            return dummy
+        if cls is Rectangle:
+            instance = cls(1, 1)
+        elif cls is Square:
+            instance = cls(1)
         else:
-            return None
+            instance = cls()
 
+        instance.update(**dictionary)
+        return instance
+     
     @classmethod
     def load_from_file(cls):
         """Return a list of instance from json file
@@ -93,8 +93,11 @@ class Base:
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as json_file:
-                json_string = json.read()
-                dictionaries = cls.from_json_string(json_string)
-                return[cls.create(**d) for d in dictionaries]                
+                json_string = json_file.read()
+                list_dicts = json.loads(json_string)
+                instances = []
+                for dict_obj in list_dicts:
+                    instances.append(cls.create(**dict_obj))
+                return instances 
         except FileNotFoundError:
             return []
