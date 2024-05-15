@@ -94,7 +94,7 @@ class Base:
         try:
             with open(filename, 'r') as json_file:
                 json_string = json_file.read()
-                list_dicts = json.loads(json_string)
+                list_dicts = cls.from_json.string(json_string)
                 instances = []
                 for dict_obj in list_dicts:
                     instances.append(cls.create(**dict_obj))
