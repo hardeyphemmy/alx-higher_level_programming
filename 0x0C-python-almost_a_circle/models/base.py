@@ -83,7 +83,7 @@ class Base:
 
         instance.update(**dictionary)
         return instance
-     
+
     @classmethod
     def load_from_file(cls):
         """Return a list of instance from json file
@@ -99,6 +99,6 @@ class Base:
                 for dict_obj in list_dicts:
                     instance = (cls.create(**dict_obj))
                     instances.append(instance)
-                return instances 
+                return instances
         except FileNotFoundError:
             return []
