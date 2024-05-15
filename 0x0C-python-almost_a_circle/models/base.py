@@ -90,7 +90,14 @@ class Base:
         Return:
             list: A list of an instance
         """
-        if cls.__name__ == "Rectangle"
-                    return instance
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r') as json_file:
+                json_string = json_file.read()
+                list_dicts = json.loads(json_string)
+                instances = []
+                for dict_obj in list_dicts:
+                    instances.append(cls.create(**dict_obj))
+                return instances
         except FileNotFoundError:
             return []
