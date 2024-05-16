@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """This is a module base."""
-import json
 import csv
-
+import json
 
 class Base:
     """This is a class of all other classes in this project.
