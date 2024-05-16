@@ -2,6 +2,7 @@
 """This is a module base."""
 import csv
 import json
+import turtle
 
 
 class Base:
@@ -103,42 +104,40 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
-
-
-@classmethod
-def save_to_file_csv(cls, list_objs):
-    """Serialize list_objs to a csv file"""
-    filename = cls.__name__ + ".csv"
-    with open(filename, mode='w', newline='') as cvsfile:
-        if list_objs is None or len(list_objs) == 0:
-            csvfile.write("[]")
-        else:
-            if cls.__name__ == "Rectangle":
-                fieldnames = ["id", "width", "height", "x", "y"]
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize list_objs to a csv file"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode='w', newline='') as cvsfile:
+            if list_objs is None or len(list_objs) == 0:
+                csvfile.write("[]")
             else:
-                fieldnames = ["id", "size", "x", "y"]
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writeheader()
-            for obj in list_objs:
-                writer.writerow(obj.to_dictionary())
+                writer.writeheader()
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
 
 
-@classmethod
-def load_from_file_csv(cls):
-    """Deserialize instance from a csv file"""
-    filename = cls.__name__ + ".csv"
-    try:
-        with open(filename, "r") as csvfile:
-            if cls.__name__ == "Rectangle":
-                fieldnames = ["id", "width", "height", "x", "y"]
-            else:
-                fieldnames = ["id", "size", "x", "y"]
-            reader = csv.DictReader(csvfile, fieldnames=fieldnames)
-            instances = []
-            for row in reader:
-                instance = cls.create(**{k: int(v) for k, v in row.items()})
-                instances.append(instance)
-            return instances
-    except FileNotFoundError:
-        return []
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize instance from a csv file"""
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                reader = csv.DictReader(csvfile, fieldnames=fieldnames)
+                instances = []
+                for row in reader:
+                    instance = cls.create(**{k: int(v) for k, v in row.items()})
+                    instances.append(instance)
+                return instances
+        except FileNotFoundError:
+            return []
