@@ -3,6 +3,7 @@
 import csv
 import json
 
+
 class Base:
     """This is a class of all other classes in this project.
     manage attribute in all future classes.
