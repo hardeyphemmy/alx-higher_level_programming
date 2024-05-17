@@ -104,6 +104,7 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serialize list_objs to a csv file"""
@@ -122,7 +123,6 @@ class Base:
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
-
     @classmethod
     def load_from_file_csv(cls):
         """Deserialize instance from a csv file"""
@@ -136,8 +136,38 @@ class Base:
                 reader = csv.DictReader(csvfile, fieldnames=fieldnames)
                 instances = []
                 for row in reader:
-                    instance = cls.create(**{k: int(v) for k, v in row.items()})
+                    instance = cls.create(**{k: int(v) for k, v in
+                                             row.items()})
                     instances.append(instance)
                 return instances
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """open a window and draw Rectangle and Square"""
+        turtle.screen().bgcolour("white")
+        pen = turtle.Turtle()
+        pen.shape("turtle")
+        pen.color("black")
+        pen.speed(2)
+
+        for rect in list_rectangles:
+            pen.up()
+            pen.goto(rect.x, rect.y)
+            pen.down()
+            for i in range(2):
+                pen.forward(rect.width)
+                pen.left(90)
+                pen.forward(rect.height)
+                pen.left(90)
+
+        for square in list_squares:
+            pen.up()
+            pen.goto(square.x, square.y)
+            pen.down()
+            for i in range(4):
+                pen.forward(square.size)
+                pen.left(90)
+
+        turtle.done()
